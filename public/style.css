@@ -1,0 +1,73 @@
+/****** Main Styling ******/
+
+body {
+  margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #fff;
+  font-weight: 900;
+	background-color: #80C8BD;
+	text-align: center;
+  background-image: linear-gradient(to bottom, #009D9E, #80C8BD, #80C8BD, #80C8BD, #009D9E);
+}
+
+.container {
+  margin: 0;
+	padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 90vh;
+  width: 100vw;
+}
+
+ol {
+	list-style-position: inside;
+}
+ul {
+	list-style-type: none;
+}
+
+a {
+	color: white;
+}
+
+.form-container{
+  display:block;
+  text-align: center;
+}
+
+#inputfield{
+  padding-left: 22px;
+  margin-bottom: 10px
+}
+
+input {
+  display: block;
+  position: relative;
+  margin: auto;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+input[type=file] {
+  cursor: pointer;
+}
+
+input#button {
+  width: 230px;
+}
+
+.view {
+  border: 2px solid  #009D9E;
+  border-radius: 3px;
+  padding-bottom: 20px;
+  width: 375px;
+}
+/****** Logo Div Styling ******/
+
+img {
+	margin: 20px auto 0 auto;
+	display: block;
+}
