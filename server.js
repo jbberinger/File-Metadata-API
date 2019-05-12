@@ -4,20 +4,24 @@ var express = require('express');
 var cors = require('cors');
 var multer = require('multer');
 
-// require and use "multer"...
-
 var app = express();
 
 app.use(cors());
 app.use('/public', express.static(process.cwd() + '/public'));
 
 // Sets up multer
-let upload = multer({ dest: 'uploads/' })
+let storage = multer.memoryStorage();
+let upload = multer({ storage: storage })
 
-app.post('/api/fileanalyse', upload.single('upfile'), (req, res, next) => {
+// Retrieves metadata and returns as JSON
+app.post('/api/fileanalyse', upload.single('upfile'), (req, res) => {
   let filename = req.file.filename;
   let size = req.file.size;
-  res.json({filename: filename, size: size});
+  res.json({
+    filename: req.file.originalname, 
+    type: req.file.mimetype,
+    size: req.file.size
+  });
 });
 
 app.get('/', function (req, res) {
