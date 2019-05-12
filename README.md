@@ -1,3 +1,10 @@
+Built with: Node, Express, Multer, HTML5, CSS, Javascript
+
+[Live Glitch App](https://separate-gray.glitch.me)
+
+Retrieves filename and size metadata from uploaded file and returns it as JSON.
+
+--------
 
 # API Project: File Metadata Microservice for freeCodeCamp
 
